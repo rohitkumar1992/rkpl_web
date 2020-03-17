@@ -1,0 +1,11 @@
+version: "3"
+services:
+  planetshare:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3002:3000"
+    volumes:
+      - /var/web_planetshare/node_modules
+      - .:/var/web_planetshare

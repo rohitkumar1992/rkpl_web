@@ -1,0 +1,6 @@
+FROM node:alpine
+WORKDIR /var/web_planetshare
+COPY package.json .
+RUN npm install
+COPY . .
+CMD ["npm","start"]
